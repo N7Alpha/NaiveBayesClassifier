@@ -11,7 +11,7 @@
 #include <fstream>
 #include <string>
 #include "Document.hpp"
-#include "NBCModel.cpp"
+#include "NBCModel.hpp"
 using namespace std;
 
 
