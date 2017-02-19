@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3BD4A7D1E4D534B002FF931 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3BD4A7C1E4D534B002FF931 /* main.cpp */; };
+		B378173F1E4FDD08001DA38F /* Document.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B378173D1E4FDD08001DA38F /* Document.cpp */; };
+		B37817421E4FE1C9001DA38F /* WordFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B37817401E4FE1C9001DA38F /* WordFilter.cpp */; };
+		B37817451E500AF2001DA38F /* WordCountHeuristic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B37817431E500AF2001DA38F /* WordCountHeuristic.cpp */; };
+		B3BD4A7D1E4D534B002FF931 /* NaiveBayesClassifier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3BD4A7C1E4D534B002FF931 /* NaiveBayesClassifier.cpp */; };
+		B3BD4A851E4FD49A002FF931 /* NBCModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3BD4A831E4FD49A002FF931 /* NBCModel.cpp */; };
+		B3BD4A881E4FD4B8002FF931 /* Heuristic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3BD4A861E4FD4B8002FF931 /* Heuristic.cpp */; };
+		B3BD4A8B1E4FD4CA002FF931 /* WordHeuristic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3BD4A891E4FD4CA002FF931 /* WordHeuristic.cpp */; };
+		B3BD4A8E1E4FDB70002FF931 /* LocalWordHeuristic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3BD4A8C1E4FDB70002FF931 /* LocalWordHeuristic.cpp */; };
+		B3BD4A941E4FDBB7002FF931 /* CombinedHeuristic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B3BD4A921E4FDBB7002FF931 /* CombinedHeuristic.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +31,26 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B378173D1E4FDD08001DA38F /* Document.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Document.cpp; sourceTree = "<group>"; };
+		B378173E1E4FDD08001DA38F /* Document.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Document.hpp; sourceTree = "<group>"; };
+		B37817401E4FE1C9001DA38F /* WordFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WordFilter.cpp; sourceTree = "<group>"; };
+		B37817411E4FE1C9001DA38F /* WordFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WordFilter.hpp; sourceTree = "<group>"; };
+		B37817431E500AF2001DA38F /* WordCountHeuristic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WordCountHeuristic.cpp; sourceTree = "<group>"; };
+		B37817441E500AF2001DA38F /* WordCountHeuristic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WordCountHeuristic.hpp; sourceTree = "<group>"; };
+		B37817461E50121D001DA38F /* training.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = training.txt; sourceTree = "<group>"; };
+		B37817471E50122E001DA38F /* testing.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = testing.txt; sourceTree = "<group>"; };
 		B3BD4A791E4D534B002FF931 /* NaiveBayesClassifier */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NaiveBayesClassifier; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3BD4A7C1E4D534B002FF931 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		B3BD4A7C1E4D534B002FF931 /* NaiveBayesClassifier.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NaiveBayesClassifier.cpp; sourceTree = "<group>"; };
+		B3BD4A831E4FD49A002FF931 /* NBCModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NBCModel.cpp; sourceTree = "<group>"; };
+		B3BD4A841E4FD49A002FF931 /* NBCModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NBCModel.hpp; sourceTree = "<group>"; };
+		B3BD4A861E4FD4B8002FF931 /* Heuristic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Heuristic.cpp; sourceTree = "<group>"; };
+		B3BD4A871E4FD4B8002FF931 /* Heuristic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Heuristic.hpp; sourceTree = "<group>"; };
+		B3BD4A891E4FD4CA002FF931 /* WordHeuristic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WordHeuristic.cpp; sourceTree = "<group>"; };
+		B3BD4A8A1E4FD4CA002FF931 /* WordHeuristic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = WordHeuristic.hpp; sourceTree = "<group>"; };
+		B3BD4A8C1E4FDB70002FF931 /* LocalWordHeuristic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LocalWordHeuristic.cpp; sourceTree = "<group>"; };
+		B3BD4A8D1E4FDB70002FF931 /* LocalWordHeuristic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LocalWordHeuristic.hpp; sourceTree = "<group>"; };
+		B3BD4A921E4FDBB7002FF931 /* CombinedHeuristic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CombinedHeuristic.cpp; sourceTree = "<group>"; };
+		B3BD4A931E4FDBB7002FF931 /* CombinedHeuristic.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CombinedHeuristic.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +83,25 @@
 		B3BD4A7B1E4D534B002FF931 /* NaiveBayesClassifier */ = {
 			isa = PBXGroup;
 			children = (
-				B3BD4A7C1E4D534B002FF931 /* main.cpp */,
+				B37817471E50122E001DA38F /* testing.txt */,
+				B37817461E50121D001DA38F /* training.txt */,
+				B3BD4A7C1E4D534B002FF931 /* NaiveBayesClassifier.cpp */,
+				B3BD4A831E4FD49A002FF931 /* NBCModel.cpp */,
+				B3BD4A841E4FD49A002FF931 /* NBCModel.hpp */,
+				B3BD4A861E4FD4B8002FF931 /* Heuristic.cpp */,
+				B3BD4A871E4FD4B8002FF931 /* Heuristic.hpp */,
+				B37817431E500AF2001DA38F /* WordCountHeuristic.cpp */,
+				B37817441E500AF2001DA38F /* WordCountHeuristic.hpp */,
+				B3BD4A891E4FD4CA002FF931 /* WordHeuristic.cpp */,
+				B3BD4A8A1E4FD4CA002FF931 /* WordHeuristic.hpp */,
+				B3BD4A8C1E4FDB70002FF931 /* LocalWordHeuristic.cpp */,
+				B3BD4A8D1E4FDB70002FF931 /* LocalWordHeuristic.hpp */,
+				B3BD4A921E4FDBB7002FF931 /* CombinedHeuristic.cpp */,
+				B3BD4A931E4FDBB7002FF931 /* CombinedHeuristic.hpp */,
+				B378173D1E4FDD08001DA38F /* Document.cpp */,
+				B378173E1E4FDD08001DA38F /* Document.hpp */,
+				B37817401E4FE1C9001DA38F /* WordFilter.cpp */,
+				B37817411E4FE1C9001DA38F /* WordFilter.hpp */,
 			);
 			path = NaiveBayesClassifier;
 			sourceTree = "<group>";
@@ -120,7 +164,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3BD4A7D1E4D534B002FF931 /* main.cpp in Sources */,
+				B3BD4A7D1E4D534B002FF931 /* NaiveBayesClassifier.cpp in Sources */,
+				B37817421E4FE1C9001DA38F /* WordFilter.cpp in Sources */,
+				B3BD4A881E4FD4B8002FF931 /* Heuristic.cpp in Sources */,
+				B3BD4A8B1E4FD4CA002FF931 /* WordHeuristic.cpp in Sources */,
+				B3BD4A8E1E4FDB70002FF931 /* LocalWordHeuristic.cpp in Sources */,
+				B378173F1E4FDD08001DA38F /* Document.cpp in Sources */,
+				B3BD4A851E4FD49A002FF931 /* NBCModel.cpp in Sources */,
+				B37817451E500AF2001DA38F /* WordCountHeuristic.cpp in Sources */,
+				B3BD4A941E4FDBB7002FF931 /* CombinedHeuristic.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +301,7 @@
 				B3BD4A821E4D534B002FF931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
