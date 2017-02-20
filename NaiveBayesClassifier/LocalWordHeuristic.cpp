@@ -7,3 +7,16 @@
 //
 
 #include "LocalWordHeuristic.hpp"
+
+
+void LocalWordHeuristic::trainForCategory(Document doc, Category c) {
+    
+    
+    didComputeImportantFeatures = false;
+}
+
+probability_t LocalWordHeuristic::logProbability(Document doc, Category c) {
+    
+    
+    didComputeImportantFeatures = true;
+}

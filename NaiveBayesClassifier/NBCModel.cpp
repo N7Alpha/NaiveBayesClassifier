@@ -15,7 +15,13 @@
 #pragma mark interface methods
 
 NBCModel::NBCModel() {
-    heuristic = new WordHeuristic();
+    heuristic = new WordCountHeuristic();
+}
+
+void NBCModel::trainWithDocuments(std::vector<Document*> &docs) {
+    for(Document* doc : docs) {
+        trainWithDocument(*doc);
+    }
 }
 
 void NBCModel::trainWithDocument(Document &doc) {
@@ -27,13 +33,14 @@ Category NBCModel::classify(Document &doc) const {
     // calculate the probabilities for each category
     probability_t logP[CATEGORY_COUNT];
     for (int category = 0; category < CATEGORY_COUNT; category++) {
-        logP[category] = log(probabilityOfCategory((Category)category)) + heuristic->logProbability(doc, doc.getCategory());
+        logP[category] = log(probabilityOfCategory((Category)category)) + heuristic->logProbability(doc, (Category)category);
     }
     
     //find the maximum category
-    probability_t argmax = std::numeric_limits<probability_t>::min();
+    probability_t argmax = std::numeric_limits<probability_t>::lowest();
     uint category = 0;
     for (int i = 0; i < CATEGORY_COUNT; i++) {
+        
         if(logP[i] > argmax) {
             argmax = logP[i];
             category = (Category)i;

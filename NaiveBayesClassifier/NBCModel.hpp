@@ -10,10 +10,12 @@
 #define NBCModel_hpp
 
 #include <stdio.h>
+#include <vector>
 #include "Document.hpp"
 #include "Heuristic.hpp"
 #include "CombinedHeuristic.hpp"
 #include "WordHeuristic.hpp"
+#include "WordCountHeuristic.hpp"
 
 class NBCModel {
 private:
@@ -25,6 +27,7 @@ public:
     NBCModel();
     void trainWithDocument(Document &doc);
     Category classify(Document &doc) const;
+    void trainWithDocuments(std::vector<Document*> &docs);
 };
 
 #endif /* NBCModel_hpp */

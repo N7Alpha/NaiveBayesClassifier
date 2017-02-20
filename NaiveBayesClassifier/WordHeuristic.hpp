@@ -16,13 +16,13 @@
 // This class is the conditional probabilities of words
 class WordHeuristic : public Heuristic {
 private:
-    probability_t alpha = 1.0;
-    probability_t wordCount = 0;
-    std::unordered_map<std::string, int> wordFrequency[2];
+    probability_t alpha = 29.0;
+    probability_t wordCount[CATEGORY_COUNT] = {0, 0};
+    std::unordered_map<std::string, int> wordFrequency[CATEGORY_COUNT];
     
 public:
-    probability_t logProbability(Document doc, Category c);
-    void trainForCategory(Document doc, Category c);
+    probability_t logProbability(Document &doc, Category c);
+    void trainForCategory(Document &doc, Category c);
     
 };
 

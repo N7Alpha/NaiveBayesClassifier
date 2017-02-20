@@ -13,16 +13,18 @@
 #include "Heuristic.hpp"
 enum Range {
     FEW,
+    FEW_MODERATE,
     MODERATE,
+    MANY_MODERATE,
     MANY,
     RANGE_COUNT
 };
 class WordCountHeuristic : public Heuristic {
-    virtual void trainForCategory(Document doc, Category c);
-    virtual probability_t logProbability(Document doc, Category c);
+    virtual void trainForCategory(Document &doc, Category c);
+    virtual probability_t logProbability(Document &doc, Category c);
 private:
     
-    Range rangeForDocument(Document d);
+    Range rangeForDocument(Document &d);
     probability_t count[CATEGORY_COUNT][RANGE_COUNT];
 };
 
