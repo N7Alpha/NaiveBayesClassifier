@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <iomanip>
 #include <vector>
 #include <fstream>
 #include <string>
@@ -68,6 +69,7 @@ int main(int argc, const char * argv[]) {
     
     cout << difftime(timeAfterLabel, timeBeforeLabel) << " seconds (training)\n";
     cout << difftime(timeAfterTest, timeBeforeTest) << " seconds (labeling)\n";
+    cout << setprecision(3) << fixed;
     cout << correctPredictionsTrain/trainingDocs.size() << " (training)\n";
     cout << correctPredictionsTest/testingDocs.size() << " (testing)\n";
     return 0;
