@@ -16,6 +16,7 @@
 #include "CombinedHeuristic.hpp"
 #include "WordHeuristic.hpp"
 #include "WordCountHeuristic.hpp"
+#include "LocalWordHeuristic.hpp"
 
 class NBCModel {
 private:

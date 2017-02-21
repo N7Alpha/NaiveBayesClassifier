@@ -70,8 +70,8 @@ int main(int argc, const char * argv[]) {
     }
     time(&timeAfterLabel);
     
-    cout << difftime(timeBeforeLabel, timeAfterLabel) << " seconds (training)\n";
-    cout << difftime(timeBeforeTest, timeAfterTest) << " seconds (labeling)\n";
+    cout << difftime(timeAfterLabel, timeBeforeLabel) << " seconds (training)\n";
+    cout << difftime(timeAfterTest, timeBeforeTest) << " seconds (labeling)\n";
     cout << correctPredictionsTrain/trainingDocs.size() << " (training)\n";
     cout << correctPredictionsTest/testingDocs.size() << " (testing)\n";
     return 0;

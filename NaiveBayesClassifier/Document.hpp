@@ -23,7 +23,9 @@ private:
     Category category;
     std::string text;
     std::vector<std::string> words;
+    std::vector<std::vector<std::string>> sentences;
     void magicalFunctionFromTheInternet(std::string input);
+    void createSentences(std::string input);
 public:
     Document(std::string line);
     Category getCategory();

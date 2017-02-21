@@ -14,13 +14,13 @@
 #include <forward_list>
 #include <initializer_list>
 
-/*class CombinedHeuristic : public Heuristic {
+class CombinedHeuristic : public Heuristic {
 private:
-    std::forward_list<Heuristic> heuristics;
+    std::forward_list<Heuristic*> heuristics;
 public:
-    CombinedHeuristic(std::initializer_list<Heuristic> heuristics) { this->heuristics = heuristics; };
-    virtual void trainForCategory(Document doc, Category c);
-    virtual probability_t logProbability(Document doc, Category c);
-};*/
+    CombinedHeuristic(std::initializer_list<Heuristic*> heuristics) { this->heuristics = heuristics; };
+    virtual void trainForCategory(Document &doc, Category c);
+    virtual probability_t logProbability(Document &doc, Category c);
+};
 
 #endif /* CombinedHeuristic_hpp */

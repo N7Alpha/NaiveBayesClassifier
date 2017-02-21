@@ -18,7 +18,7 @@ class WordHeuristic : public Heuristic {
 private:
     probability_t alpha = 29.0;
     probability_t wordCount[CATEGORY_COUNT] = {0, 0};
-    std::unordered_map<std::string, int> wordFrequency[CATEGORY_COUNT];
+    std::unordered_map<std::string, uint> wordFrequency[CATEGORY_COUNT];
     
 public:
     probability_t logProbability(Document &doc, Category c);

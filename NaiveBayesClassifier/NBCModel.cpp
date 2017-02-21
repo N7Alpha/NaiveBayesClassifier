@@ -10,12 +10,13 @@
 #include <numeric>
 #include <math.h>
 #include <limits>
+#include <initializer_list>
 
 
 #pragma mark interface methods
 
 NBCModel::NBCModel() {
-    heuristic = new WordCountHeuristic();
+    heuristic = new CombinedHeuristic( { new LocalWordHeuristic(), new WordHeuristic() } );
 }
 
 void NBCModel::trainWithDocuments(std::vector<Document*> &docs) {
