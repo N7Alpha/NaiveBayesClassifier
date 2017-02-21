@@ -18,6 +18,7 @@ enum Category {
     POSITIVE,
     CATEGORY_COUNT
 };
+typedef unsigned int uint;
 class Document {
 private:
     Category category;
