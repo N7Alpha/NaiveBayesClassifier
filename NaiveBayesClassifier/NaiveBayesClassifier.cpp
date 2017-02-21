@@ -46,13 +46,9 @@ void loadDocuments() {
 
 int main(int argc, const char * argv[]) {
 
-#ifdef __APPLE__
-    trainingFileName = "training.txt";
-    testingFileName = "testing.txt";
-#elif
     trainingFileName = argv[1];
     testingFileName = argv[2];
-#endif
+    
     loadDocuments();
     time(&timeBeforeTest);
     movieNBC.trainWithDocuments(trainingDocs);

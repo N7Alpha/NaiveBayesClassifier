@@ -1,6 +1,6 @@
 # Declaration of variables
 CC = g++
-CC_FLAGS = -w
+CC_FLAGS = -w -std=gnu++11
  
 # File names
 EXEC = NaiveBayesClassifier
