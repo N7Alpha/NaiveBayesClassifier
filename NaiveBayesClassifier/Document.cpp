@@ -19,7 +19,7 @@ Document::Document(std::string line) {
     std::transform(text.begin(), text.end(), text.begin(), ::tolower);
     category = (Category)std::stoi(line.substr(line.length() - 1, line.length()));
     magicalFunctionFromTheInternet(text);
-    createSentences(text);
+    //createSentences(text);
 }
 
 void Document::createSentences(std::string input) {

@@ -36,7 +36,7 @@ private:
 class LocalWordHeuristic : public Heuristic {
 private:
     //Tweakable Parameters
-    uint alpha = 1.0;
+    probability_t alpha = 1.0;
     uint importantFeaturesCount = 1200;
     uint adjacencyCutoff = 3;
     
@@ -55,6 +55,9 @@ private:
     std::string keyForWords(std::string s1, std::string s2);
     
 public:
+    //Constructors
+    LocalWordHeuristic(probability_t alpha = 1.0, uint adjacencyCutoff = 3) : alpha(alpha), adjacencyCutoff(adjacencyCutoff) {};
+    
     //Heuristic interface functions
     virtual void trainForCategory(Document &doc, Category c);
     virtual probability_t logProbability(Document &doc, Category c);

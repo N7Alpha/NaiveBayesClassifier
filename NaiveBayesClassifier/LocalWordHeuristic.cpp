@@ -35,6 +35,7 @@ probability_t LocalWordHeuristic::logProbability(Document &doc, Category c) {
             //log((wordFrequency[c][word] + alpha) / ( alpha * wordFrequency[c].size() + wordCount[c]))
         }
     }
+    
     return runningProbability;
 }
 

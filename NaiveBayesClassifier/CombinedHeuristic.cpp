@@ -9,15 +9,15 @@
 #include "CombinedHeuristic.hpp"
 
 void CombinedHeuristic::trainForCategory(Document &doc, Category c) {
-    for (Heuristic *h : heuristics) {
-        h->trainForCategory(doc, c);
+    for (std::pair<Heuristic*, double> h : heuristics) {
+        h.first->trainForCategory(doc, c);
     }
 }
 
 probability_t CombinedHeuristic::logProbability(Document &doc, Category c) {
     probability_t logP = 0;
-    for(Heuristic *h : heuristics) {
-        logP += h->logProbability(doc, c);
+    for(std::pair<Heuristic*, double> h : heuristics) {
+        logP += h.first->logProbability(doc, c) * h.second;
     }
     return logP;
 }

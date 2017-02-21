@@ -16,7 +16,7 @@
 #pragma mark interface methods
 
 NBCModel::NBCModel() {
-    heuristic = new CombinedHeuristic( { new LocalWordHeuristic(), new WordHeuristic() } );
+    heuristic = new CombinedHeuristic( { {new LocalWordHeuristic(1.0, 4), 0.3}, {new WordHeuristic(), 1.0}} );
 }
 
 void NBCModel::trainWithDocuments(std::vector<Document*> &docs) {
