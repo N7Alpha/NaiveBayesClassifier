@@ -9,6 +9,7 @@
 #include "Document.hpp"
 #include <string>
 #include <sstream>
+#include <algorithm>
 
 Category Document::getCategory() {
     return category;
@@ -22,7 +23,7 @@ Document::Document(std::string line) {
     //createSentences(text);
 }
 
-void Document::createSentences(std::string input) {
+/*void Document::createSentences(std::string input) {
     using namespace std;
     bool nchr=false;
     char temp;
@@ -62,7 +63,7 @@ void Document::createSentences(std::string input) {
         sentences.push_back(words);
     }
     
-}
+}*/
 
 void Document::magicalFunctionFromTheInternet(std::string input) {
     bool nchr=false;
@@ -95,7 +96,12 @@ void Document::magicalFunctionFromTheInternet(std::string input) {
     // I think input contains the text of the review with all punctuation removed
     //This is kind of a mess
     std::istringstream iss(input);
+    std::string word;
+    while (getline(iss, word, ' ')) {
+        words.push_back(word);
+    }
+    /*std::istringstream iss(input);
     copy(std::istream_iterator<std::string>(iss),
          std::istream_iterator<std::string>(),
-         back_inserter(words));
+         back_inserter(words)); */
 }
