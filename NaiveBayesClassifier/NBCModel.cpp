@@ -23,7 +23,7 @@ NBCModel::NBCModel() {
     modifiedBagOfWords.first = new LocalWordHeuristic(1.0, 4);
     modifiedBagOfWords.second = 0.3;
     heuristics.push_front(bagOfWords);
-    heuristics.push_front(modifiedBagOfWords);
+    //heuristics.push_front(modifiedBagOfWords);
     heuristic = new CombinedHeuristic(heuristics);
 }
 
