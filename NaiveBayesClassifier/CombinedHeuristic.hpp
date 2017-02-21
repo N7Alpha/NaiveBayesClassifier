@@ -16,9 +16,9 @@
 
 class CombinedHeuristic : public Heuristic {
 private:
-    std::forward_list<std::pair<Heuristic*, double>> heuristics;
+    std::forward_list<std::pair<Heuristic*, double> > heuristics;
 public:
-    CombinedHeuristic(std::initializer_list<std::pair<Heuristic*, probability_t>> heuristics) { this->heuristics = heuristics; };
+    CombinedHeuristic(std::forward_list<std::pair<Heuristic*, probability_t> > heuristics) { this->heuristics = heuristics; };
     virtual void trainForCategory(Document &doc, Category c);
     virtual probability_t logProbability(Document &doc, Category c);
 };

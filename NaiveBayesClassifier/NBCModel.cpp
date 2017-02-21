@@ -16,7 +16,15 @@
 #pragma mark interface methods
 
 NBCModel::NBCModel() {
-    heuristic = new CombinedHeuristic( { {new LocalWordHeuristic(1.0, 4), 0.3}, {new WordHeuristic(), 1.0}} );
+    std::forward_list<std::pair<Heuristic*, probability_t> > heuristics;
+    std::pair<Heuristic*, probability_t> bagOfWords, modifiedBagOfWords;
+    bagOfWords.first = new WordHeuristic();
+    bagOfWords.second = 1.0;
+    modifiedBagOfWords.first = new LocalWordHeuristic(1.0, 4);
+    modifiedBagOfWords.second = 0.3;
+    heuristics.push_front(bagOfWords);
+    heuristics.push_front(modifiedBagOfWords);
+    heuristic = new CombinedHeuristic(heuristics);
 }
 
 void NBCModel::trainWithDocuments(std::vector<Document*> &docs) {
