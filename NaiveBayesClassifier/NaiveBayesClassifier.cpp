@@ -58,7 +58,6 @@ int main(int argc, const char * argv[]) {
     
     for(Document *testingDoc : testingDocs) {
         Category predictedCategory = movieNBC.classify(*testingDoc);
-        cout << predictedCategory << '\n';
         correctPredictionsTest += (predictedCategory == testingDoc->getCategory());
     }
     for(Document *trainingDoc : trainingDocs) {
